@@ -1,0 +1,71 @@
+---
+export interface Props {
+  title: string;
+  description: string;
+  lang?: string;
+  ogImage?: string;
+}
+
+const {
+  title,
+  description,
+  lang = 'en',
+} = Astro.props;
+
+const siteName = 'Slay the Spire 2 Guide';
+const baseUrl = 'https://slaythespire2-guide.vercel.app';
+const canonical = new URL(Astro.url.pathname, baseUrl).toString();
+---
+
+<!doctype html>
+<html lang={lang}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <meta name="author" content="yuanye5939@gmail.com" />
+
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content={siteName} />
+    <meta property="og:url" content={canonical} />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+
+    <link rel="canonical" href={canonical} />
+
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2441650437092903" crossorigin="anonymous"></script>
+
+    <title>{title} | {siteName}</title>
+  </head>
+  <body class="bg-slate-900 text-slate-200 min-h-screen font-sans">
+    <nav class="bg-slate-800 border-b border-slate-700 sticky top-0 z-50">
+      <div class="max-w-5xl mx-auto px-4 py-3 flex items-center justify-between flex-wrap gap-3">
+        <a href="/" class="text-xl font-bold text-amber-400 hover:text-amber-300 transition-colors">
+          {siteName}
+        </a>
+        <div class="flex gap-4 text-sm flex-wrap">
+          <a href="/coop/" class="text-slate-300 hover:text-white transition-colors">Co-op Guide</a>
+          <a href="/coop/character-combos/" class="text-slate-300 hover:text-white transition-colors">Character Combos</a>
+          <a href="/coop/card-synergies/" class="text-slate-300 hover:text-white transition-colors">Card Synergies</a>
+          <a href="/coop/boss-strategies/" class="text-slate-300 hover:text-white transition-colors">Boss Strategies</a>
+          <a href="/coop/advanced-tips/" class="text-slate-300 hover:text-white transition-colors">Advanced Tips</a>
+        </div>
+      </div>
+    </nav>
+
+    <main class="max-w-5xl mx-auto px-4 py-8">
+      <slot />
+    </main>
+
+    <footer class="bg-slate-800 border-t border-slate-700 mt-16 py-8 text-sm text-slate-400">
+      <div class="max-w-5xl mx-auto px-4 text-center">
+        <p>Slay the Spire 2 Guide &mdash; Unofficial fan site. All game content &copy; Mega Crit.</p>
+        <p class="mt-1">Contact: <a href="mailto:yuanye5939@gmail.com" class="text-amber-400 hover:underline">yuanye5939@gmail.com</a></p>
+      </div>
+    </footer>
+  </body>
+</html>

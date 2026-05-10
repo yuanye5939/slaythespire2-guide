@@ -1,0 +1,294 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Slay the Spire 2 Co-op Advanced Tips &mdash; Ascension, Relics &amp; Strategy"
+  description="Advanced Slay the Spire 2 co-op guide: Ascension co-op rules, relic drafting strategy, map voting tactics, resource management, voice chat coordination, and pro-level multiplayer tips."
+>
+  <article class="prose prose-invert max-w-none">
+    <h1 class="text-3xl md:text-4xl font-bold text-amber-400 not-prose mb-6">
+      Advanced Tips: Mastering Co-op
+    </h1>
+
+    <p class="lead text-lg text-slate-300">
+      Once you understand the basics, these advanced strategies separate winning teams from
+      failed runs. Relic allocation philosophy, Ascension co-op rules, resource management,
+      and high-level coordination tactics.
+    </p>
+
+    <nav class="not-prose bg-slate-800 rounded-lg p-4 border border-slate-700 my-8" aria-label="Table of Contents">
+      <h2 class="text-lg font-bold text-amber-400 mb-3">Table of Contents</h2>
+      <ol class="text-sm space-y-1 text-slate-300 list-decimal list-inside">
+        <li><a href="#ascension" class="hover:text-amber-400">Co-op Ascension Rules</a></li>
+        <li><a href="#relic-allocation" class="hover:text-amber-400">Relic Drafting Philosophy</a></li>
+        <li><a href="#resource" class="hover:text-amber-400">Resource Management</a></li>
+        <li><a href="#map-pathing" class="hover:text-amber-400">Map Voting &amp; Pathing Strategy</a></li>
+        <li><a href="#communication" class="hover:text-amber-400">Voice Chat &amp; Coordination</a></li>
+        <li><a href="#death-strategy" class="hover:text-amber-400">Death &amp; Revival as Strategy</a></li>
+        <li><a href="#game-setup" class="hover:text-amber-400">Pre-Game Setup &amp; Tech</a></li>
+        <li><a href="#common-mistakes" class="hover:text-amber-400">Common Mistakes to Avoid</a></li>
+      </ol>
+    </nav>
+
+    <!-- Ascension -->
+    <section id="ascension" class="scroll-mt-20">
+      <h2 class="text-2xl font-bold text-amber-300 mb-4 not-prose">1. Co-op Ascension Rules</h2>
+
+      <div class="not-prose bg-slate-800 rounded-lg p-5 border border-slate-700 mb-4">
+        <h3 class="font-bold text-white text-lg mb-3">Key Differences from Solo Ascension</h3>
+        <ul class="text-sm text-slate-300 space-y-2">
+          <li><strong class="text-amber-400">Separate ladders:</strong> Single-player and co-op Ascension levels are completely independent. Progress in one mode doesn't carry over to the other.</li>
+          <li><strong class="text-amber-400">Character-wide unlocks:</strong> In co-op, unlocking an Ascension level makes it available for all characters. Unlike solo (where each character has their own ladder), co-op Ascension is one unified track.</li>
+          <li><strong class="text-amber-400">Lowest player sets the cap:</strong> The active Ascension is capped by the lowest level in the party. If you have Ascension 5 and your friend has Ascension 2, you play at Ascension 2. Help lower-level friends climb first.</li>
+          <li><strong class="text-amber-400">Unlock method:</strong> Beat all three acts in co-op to unlock the next Ascension level. Same as solo.</li>
+        </ul>
+      </div>
+
+      <div class="not-prose overflow-x-auto">
+        <table class="w-full text-left border-collapse bg-slate-800 rounded-lg overflow-hidden text-sm">
+          <thead class="bg-slate-700">
+            <tr>
+              <th class="p-3 font-semibold text-amber-400">Lv</th>
+              <th class="p-3 font-semibold text-amber-400">Name</th>
+              <th class="p-3 font-semibold text-amber-400">Effect</th>
+              <th class="p-3 font-semibold text-amber-400">Co-op Impact</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-700">
+            <tr><td class="p-3">1</td><td class="p-3">Swarming Elites</td><td class="p-3">Elites spawn more often</td><td class="p-3"><span class="text-green-400">Actually beneficial in co-op</span> — more elites = more relics per player</td></tr>
+            <tr><td class="p-3">2</td><td class="p-3">Weary Traveler</td><td class="p-3">Ancients heal only 80% missing HP</td><td class="p-3">Mend becomes more valuable; plan Rest Sites carefully</td></tr>
+            <tr><td class="p-3">3</td><td class="p-3">Poverty</td><td class="p-3">25% less gold</td><td class="p-3">Gold management is tighter for everyone</td></tr>
+            <tr><td class="p-3">4</td><td class="p-3">Tight Belt</td><td class="p-3">Start with 1 fewer potion slot</td><td class="p-3">Throwing potions are more precious</td></tr>
+            <tr><td class="p-3">5</td><td class="p-3">Ascender's Bane</td><td class="p-3">Start each run cursed</td><td class="p-3">Curse affects all players; removal priority higher</td></tr>
+            <tr><td class="p-3">6</td><td class="p-3">Gloom</td><td class="p-3">Fewer Rest Sites</td><td class="p-3">Mend opportunities scarcer; healing management critical</td></tr>
+            <tr><td class="p-3">7</td><td class="p-3">Scarcity</td><td class="p-3">Rare/upgraded cards appear less</td><td class="p-3">Co-op exclusive cards harder to find</td></tr>
+            <tr><td class="p-3">8</td><td class="p-3">Tough Enemies</td><td class="p-3">All enemies harder to kill</td><td class="p-3">Scaling stacks with player-count HP multiplier</td></tr>
+            <tr><td class="p-3">9</td><td class="p-3">Deadly Enemies</td><td class="p-3">Deadlier attacks</td><td class="p-3">Block coordination becomes mandatory</td></tr>
+            <tr><td class="p-3">10</td><td class="p-3">Double Boss</td><td class="p-3">Fight two Act 3 bosses back-to-back</td><td class="p-3">Conserve team resources across both fights</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Relic Allocation -->
+    <section id="relic-allocation" class="scroll-mt-20 mt-10">
+      <h2 class="text-2xl font-bold text-amber-300 mb-4 not-prose">2. Relic Drafting Philosophy</h2>
+
+      <p>
+        Relic drafting is where co-op teams win or lose. The rock-paper-scissors tiebreaker is
+        a last resort — communication beforehand prevents wasted relics entirely.
+      </p>
+
+      <h3 class="text-xl font-semibold text-white mb-3 not-prose">The Relic Allocation Priority System</h3>
+
+      <div class="not-prose grid gap-4 md:grid-cols-2">
+        <div class="bg-slate-800 rounded-lg p-4 border border-slate-700">
+          <h4 class="font-bold text-red-400 mb-2">Strength/Damage → DPS</h4>
+          <p class="text-sm text-slate-300">Give all offensive relics (Strength, damage boosts, energy generation) to your burst DPS: Regent or Ironclad damage builds.</p>
+        </div>
+        <div class="bg-slate-800 rounded-lg p-4 border border-slate-700">
+          <h4 class="font-bold text-blue-400 mb-2">Block/HP → Anchor</h4>
+          <p class="text-sm text-slate-300">Defensive relics (Block, Max HP, healing) go to the tank: Ironclad. They need to survive when everyone else falls.</p>
+        </div>
+        <div class="bg-slate-800 rounded-lg p-4 border border-slate-700">
+          <h4 class="font-bold text-green-400 mb-2">Energy/Utility → Debuffer</h4>
+          <p class="text-sm text-slate-300">Energy relics and utility tools go to the debuffer (Silent) or orb character (Defect) to enable consistent debuff/Plasma application.</p>
+        </div>
+        <div class="bg-slate-800 rounded-lg p-4 border border-slate-700">
+          <h4 class="font-bold text-amber-400 mb-2">Team-wide → Distribute Evenly</h4>
+          <p class="text-sm text-slate-300">Relics that benefit the whole party (like Miniature Tent, Booming Conch) should go to whoever can use them most reliably — often the support player.</p>
+        </div>
+      </div>
+
+      <div class="not-prose bg-amber-900/30 border border-amber-600/40 rounded-lg p-4 mt-4">
+        <p class="text-sm text-amber-300"><strong>Golden rule:</strong> A relic on the wrong character is a wasted opportunity cost. Discuss every chest before anyone clicks. One person should be the designated "relic caller" who suggests allocations.</p>
+      </div>
+    </section>
+
+    <!-- Resource Management -->
+    <section id="resource" class="scroll-mt-20 mt-10">
+      <h2 class="text-2xl font-bold text-amber-300 mb-4 not-prose">3. Resource Management</h2>
+
+      <div class="not-prose space-y-4">
+        <div class="bg-slate-800 rounded-lg p-5 border border-slate-700">
+          <h3 class="font-bold text-amber-400 mb-2">Gold Strategy</h3>
+          <p class="text-sm text-slate-300">Gold is individual — you can't pool money. But you <em>can</em> coordinate: if one player is close to affording a key relic or card removal, let them take gold from events. Remove curses at shops early before they compound in co-op fights.</p>
+        </div>
+
+        <div class="bg-slate-800 rounded-lg p-5 border border-slate-700">
+          <h3 class="font-bold text-amber-400 mb-2">Potion Management</h3>
+          <p class="text-sm text-slate-300">Throwing potions are <strong>team assets</strong>. Save them for clutch moments: reviving with 1 HP after a fight means you need potions to stabilize before the next combat. Don't use thrown potions for minor optimization — they're insurance policies.</p>
+        </div>
+
+        <div class="bg-slate-800 rounded-lg p-5 border border-slate-700">
+          <h3 class="font-bold text-amber-400 mb-2">Campfire Priority</h3>
+          <p class="text-sm text-slate-300">Campfires have three options in co-op (Rest, Upgrade, Mend). The optimal strategy:
+            <strong>the most endangered player Rests</strong>, <strong>a teammate Mends the second-most endangered</strong>,
+            and <strong>healthy players Upgrade</strong>. Never have the whole team Rest — under-upgraded decks collapse in later Acts.
+          </p>
+        </div>
+
+        <div class="bg-slate-800 rounded-lg p-5 border border-slate-700">
+          <h3 class="font-bold text-amber-400 mb-2">Card Removal Priority</h3>
+          <p class="text-sm text-slate-300">In co-op, thin decks are still good — but don't over-remove. You need enough card volume to contribute Block when bosses AoE the entire team. A 15-card deck that bricks on a bad draw hurts the whole party, not just you.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Map Pathing -->
+    <section id="map-pathing" class="scroll-mt-20 mt-10">
+      <h2 class="text-2xl font-bold text-amber-300 mb-4 not-prose">4. Map Voting &amp; Pathing Strategy</h2>
+
+      <div class="not-prose space-y-4">
+        <div class="bg-slate-800 rounded-lg p-4 border border-slate-700">
+          <h3 class="font-bold text-white mb-2">Vote with Team Health in Mind</h3>
+          <p class="text-sm text-slate-300">The map is shared. If a teammate is struggling, a Rest Site is worth more than an Elite. The tiebreaker is random — don't rely on winning coin flips. Negotiate and build consensus.</p>
+        </div>
+
+        <div class="bg-slate-800 rounded-lg p-4 border border-slate-700">
+          <h3 class="font-bold text-white mb-2">Plan 2-3 Nodes Ahead</h3>
+          <p class="text-sm text-slate-300">Don't just vote on the immediate fork. Look at what comes after: "If we go left, we can hit the Elite, then the Shop, then the Rest Site before the boss." Draw on the map to illustrate routes.</p>
+        </div>
+
+        <div class="bg-slate-800 rounded-lg p-4 border border-slate-700">
+          <h3 class="font-bold text-white mb-2">Elite Value Scales with Players</h3>
+          <p class="text-sm text-slate-300">At 4 players, an elite drops 4 relics. This makes elite-heavy paths <strong>far more valuable</strong> in co-op than solo. If the team is healthy, take the elite path. The relic economy snowballs.</p>
+        </div>
+
+        <div class="bg-slate-800 rounded-lg p-4 border border-slate-700">
+          <h3 class="font-bold text-white mb-2">Golden Compass Consideration</h3>
+          <p class="text-sm text-slate-300">The Golden Compass (Act 2 Tezcatara boon) forces a single linear path. In co-op, if one player takes it, <strong>everyone follows that path</strong>. Only take it if the team agrees — it removes all routing flexibility for the rest of the Act.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Communication -->
+    <section id="communication" class="scroll-mt-20 mt-10">
+      <h2 class="text-2xl font-bold text-amber-300 mb-4 not-prose">5. Voice Chat &amp; Coordination</h2>
+
+      <p>
+        There's no built-in voice chat in Slay the Spire 2. Use Discord or Steam voice.
+        Test groups report <strong>dramatically higher win rates</strong> with voice coordination vs. text-only play.
+      </p>
+
+      <div class="not-prose space-y-4 mt-4">
+        <div class="bg-slate-800 rounded-lg p-4 border border-slate-700">
+          <h3 class="font-bold text-white mb-2">Call Out Debuffs First</h3>
+          <p class="text-sm text-slate-300">The debuffer announces: "Applying Vulnerable and Weak this turn." Everyone else knows to wait before dumping damage. The most common co-op mistake is attacking before debuffs land.</p>
+        </div>
+
+        <div class="bg-slate-800 rounded-lg p-4 border border-slate-700">
+          <h3 class="font-bold text-white mb-2">Declare End-of-Turn</h3>
+          <p class="text-sm text-slate-300">Everyone says "done" or "ending" before clicking End Turn. A premature turn end from one player can leave the team without Block against a lethal attack. Make this a habit from the first fight.</p>
+        </div>
+
+        <div class="bg-slate-800 rounded-lg p-4 border border-slate-700">
+          <h3 class="font-bold text-white mb-2">Announce Co-op Card Availability</h3>
+          <p class="text-sm text-slate-300">Tell your team when you draw key co-op cards (Intercept, Energy Surge, Flanking). These change the turn plan for everyone. "I have Intercept — who needs protection this turn?"</p>
+        </div>
+
+        <div class="bg-slate-800 rounded-lg p-4 border border-slate-700">
+          <h3 class="font-bold text-white mb-2">Assign a Shot-Caller</h3>
+          <p class="text-sm text-slate-300">For tough fights, one person should be the final decision-maker on strategy. Usually the most experienced player. "We're focusing the left minion, then bursting the boss. Ironclad, save Block for turn 3."</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Death as Strategy -->
+    <section id="death-strategy" class="scroll-mt-20 mt-10">
+      <h2 class="text-2xl font-bold text-amber-300 mb-4 not-prose">6. Death &amp; Revival as Strategy</h2>
+
+      <p>
+        The revival mechanic isn't just a safety net — it's a <strong>strategic resource</strong>. Advanced teams intentionally
+        let non-essential players die to conserve the team's overall resources.
+      </p>
+
+      <div class="not-prose grid gap-4 md:grid-cols-2 mt-4">
+        <div class="bg-slate-800 rounded-lg p-4 border border-slate-700">
+          <h3 class="font-bold text-green-400 mb-2">When to Let Someone Die</h3>
+          <ul class="text-sm text-slate-300 space-y-1">
+            <li>They have no Block and the boss is near death — don't waste potions saving them</li>
+            <li>They've already played their exhaust co-op cards for the fight</li>
+            <li>The tank is healthy enough to finish the fight alone</li>
+          </ul>
+        </div>
+        <div class="bg-slate-800 rounded-lg p-4 border border-slate-700">
+          <h3 class="font-bold text-red-400 mb-2">When to Save at All Costs</h3>
+          <ul class="text-sm text-slate-300 space-y-1">
+            <li>They're the only debuffer and debuffs are about to expire</li>
+            <li>They have essential co-op cards (Energy Surge, Intercept) in hand</li>
+            <li>The tank is also low — you need multiple survivors for insurance</li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="mt-4">After a revive (1 HP), use Mend at the next Rest Site immediately. Don't enter combat with a 1 HP teammate — one AoE attack kills them and you lose their contributions for the entire fight.</p>
+    </section>
+
+    <!-- Game Setup -->
+    <section id="game-setup" class="scroll-mt-20 mt-10">
+      <h2 class="text-2xl font-bold text-amber-300 mb-4 not-prose">7. Pre-Game Setup &amp; Tech</h2>
+
+      <div class="not-prose space-y-3">
+        <div class="bg-slate-800 rounded-lg p-4 border border-slate-700">
+          <h3 class="font-bold text-white mb-2">Host on a Wired Connection</h3>
+          <p class="text-sm text-slate-300">The host must stay connected for the entire run. If the host disconnects, the run ends for everyone. Use the player with the most stable internet (preferably wired, not WiFi) as host.</p>
+        </div>
+
+        <div class="bg-slate-800 rounded-lg p-4 border border-slate-700">
+          <h3 class="font-bold text-white mb-2">No Mods in Co-op</h3>
+          <p class="text-sm text-slate-300">Mods cause desyncs in multiplayer. All players should disable mods before starting a co-op session. Even UI-only mods have been reported to cause issues.</p>
+        </div>
+
+        <div class="bg-slate-800 rounded-lg p-4 border border-slate-700">
+          <h3 class="font-bold text-white mb-2">Fresh vs. Shared Save Files</h3>
+          <p class="text-sm text-slate-300">You can start a co-op run with fresh or shared save files. Shared saves let everyone use the host's unlocked cards/relics. Fresh saves mean each player only has their own unlocks. For new players, use the most progressed player's save as host.</p>
+        </div>
+
+        <div class="bg-slate-800 rounded-lg p-4 border border-slate-700">
+          <h3 class="font-bold text-white mb-2">Character Unlocks</h3>
+          <p class="text-sm text-slate-300">Make sure all players have the characters they want to play unlocked before starting. The host's unlocks don't grant access to locked characters for joiners.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Common Mistakes -->
+    <section id="common-mistakes" class="scroll-mt-20 mt-10">
+      <h2 class="text-2xl font-bold text-amber-300 mb-4 not-prose">8. Common Mistakes to Avoid</h2>
+
+      <div class="not-prose space-y-3">
+        <div class="bg-red-900/10 border border-red-700/30 rounded-lg p-4">
+          <h3 class="font-bold text-red-400 mb-1">Playing Solo Decks in Co-op</h3>
+          <p class="text-sm text-red-300">Your favorite solo build might not work in co-op. Decks that ignore Block (because you dodge in solo) will get you killed when bosses hit everyone simultaneously. Adapt your deck to co-op realities.</p>
+        </div>
+        <div class="bg-red-900/10 border border-red-700/30 rounded-lg p-4">
+          <h3 class="font-bold text-red-400 mb-1">Ignoring Co-op Cards</h3>
+          <p class="text-sm text-red-300">Co-op cards look unfamiliar because they don't exist in solo. Don't skip them out of habit. Rally, Intercept, and Flanking are often the best cards in your deck.</p>
+        </div>
+        <div class="bg-red-900/10 border border-red-700/30 rounded-lg p-4">
+          <h3 class="font-bold text-red-400 mb-1">Selfish Rest Site Usage</h3>
+          <p class="text-sm text-red-300">When a teammate has 10 HP and you're at 60, Mend them instead of Upgrading your card. A teammate dying early in the next fight costs more than one upgrade.</p>
+        </div>
+        <div class="bg-red-900/10 border border-red-700/30 rounded-lg p-4">
+          <h3 class="font-bold text-red-400 mb-1">Not Communicating Before Chests</h3>
+          <p class="text-sm text-red-300">The fastest clicker grabbing the best relic is the fastest way to lose. Talk through every relic draft. Assign a "relic caller" if needed.</p>
+        </div>
+        <div class="bg-red-900/10 border border-red-700/30 rounded-lg p-4">
+          <h3 class="font-bold text-red-400 mb-1">Running Duplicate Classes</h3>
+          <p class="text-sm text-red-300">Two Ironclads = competing for the same Ironclad relics = half the effective relic income. Always diversify the team composition.</p>
+        </div>
+        <div class="bg-red-900/10 border border-red-700/30 rounded-lg p-4">
+          <h3 class="font-bold text-red-400 mb-1">Wasting Potions on Minor Optimization</h3>
+          <p class="text-sm text-red-300">Using a thrown Block potion to save 5 HP in Act 1 means you won't have it when a teammate is about to die in Act 3. Potions are insurance, not efficiency tools.</p>
+        </div>
+      </div>
+    </section>
+  </article>
+
+  <div class="not-prose mt-12 text-center">
+    <a href="/coop/" class="inline-block bg-amber-600 hover:bg-amber-500 text-black font-bold px-6 py-3 rounded-lg transition-colors">
+      Back to Co-op Overview &rarr;
+    </a>
+  </div>
+</BaseLayout>

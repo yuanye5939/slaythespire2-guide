@@ -1,0 +1,328 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Slay the Spire 2 Co-op Boss Strategies &mdash; Boss Fight Guide"
+  description="Slay the Spire 2 co-op boss strategies: how enemy scaling changes each boss fight, team tactics for every Act boss, secret boss encounters, and multiplayer-specific boss mechanics."
+>
+  <article class="prose prose-invert max-w-none">
+    <h1 class="text-3xl md:text-4xl font-bold text-amber-400 not-prose mb-6">
+      Boss Strategies: Co-op Boss Fights
+    </h1>
+
+    <p class="lead text-lg text-slate-300">
+      Bosses in co-op are fundamentally different from solo. Enemy HP scales with player count,
+      all players are targeted simultaneously, and team coordination determines survival.
+      This guide covers how to approach every boss fight as a team.
+    </p>
+
+    <nav class="not-prose bg-slate-800 rounded-lg p-4 border border-slate-700 my-8" aria-label="Table of Contents">
+      <h2 class="text-lg font-bold text-amber-400 mb-3">Table of Contents</h2>
+      <ol class="text-sm space-y-1 text-slate-300 list-decimal list-inside">
+        <li><a href="#scaling" class="hover:text-amber-400">How Enemy Scaling Works in Co-op</a></li>
+        <li><a href="#general" class="hover:text-amber-400">General Boss Tactics for Co-op</a></li>
+        <li><a href="#act1" class="hover:text-amber-400">Act 1 Bosses</a></li>
+        <li><a href="#act2" class="hover:text-amber-400">Act 2 Bosses</a></li>
+        <li><a href="#act3" class="hover:text-amber-400">Act 3 Bosses</a></li>
+        <li><a href="#secret" class="hover:text-amber-400">Secret Boss: Fake Merchant</a></li>
+        <li><a href="#elites" class="hover:text-amber-400">Elite Fights in Co-op</a></li>
+      </ol>
+    </nav>
+
+    <!-- Scaling -->
+    <section id="scaling" class="scroll-mt-20">
+      <h2 class="text-2xl font-bold text-amber-300 mb-4 not-prose">1. How Enemy Scaling Works in Co-op</h2>
+
+      <div class="not-prose overflow-x-auto mb-4">
+        <table class="w-full text-left border-collapse bg-slate-800 rounded-lg overflow-hidden">
+          <thead class="bg-slate-700">
+            <tr>
+              <th class="p-3 font-semibold text-amber-400">Players</th>
+              <th class="p-3 font-semibold text-amber-400">Enemy HP Multiplier</th>
+              <th class="p-3 font-semibold text-amber-400">Damage Scaling</th>
+              <th class="p-3 font-semibold text-amber-400">What Changes</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-700">
+            <tr><td class="p-3">2</td><td class="p-3">~2.5x</td><td class="p-3">Moderate</td><td class="p-3">Enemies attack both players. Shared debuffs start to matter.</td></tr>
+            <tr><td class="p-3">3</td><td class="p-3">~3.5x</td><td class="p-3">Significant</td><td class="p-3">Burst coordination becomes essential. Elites are very dangerous.</td></tr>
+            <tr><td class="p-3">4</td><td class="p-3">~4.5x</td><td class="p-3">Heavy</td><td class="p-3">Every player must contribute Block and damage. One weak link wipes the team.</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p>
+        Beyond raw numbers, bosses gain <strong>stronger defensive buffs</strong> in co-op.
+        Shields require more hits to break, and certain boss mechanics (like The Guardian's defensive mode)
+        activate more frequently when more players are present. Burst damage coordination is more important than ever.
+      </p>
+    </section>
+
+    <!-- General Tactics -->
+    <section id="general" class="scroll-mt-20 mt-10">
+      <h2 class="text-2xl font-bold text-amber-300 mb-4 not-prose">2. General Boss Tactics for Co-op</h2>
+
+      <div class="not-prose grid gap-4 md:grid-cols-2">
+        <div class="bg-slate-800 rounded-lg p-4 border border-slate-700">
+          <h3 class="font-bold text-amber-400 mb-2">Debuff First, Damage Second</h3>
+          <p class="text-sm text-slate-300">The debuffer applies Vulnerable and Weak on turn 1 while the team sets up or blocks. On turn 2, everyone attacks into the debuffed boss for maximum efficiency.</p>
+        </div>
+        <div class="bg-slate-800 rounded-lg p-4 border border-slate-700">
+          <h3 class="font-bold text-amber-400 mb-2">Spread Block Responsibility</h3>
+          <p class="text-sm text-slate-300">Boss AoE attacks hit <em>everyone</em>. No single tank can protect the team — every player must contribute Block. Rally and Beacon of Hope shine here.</p>
+        </div>
+        <div class="bg-slate-800 rounded-lg p-4 border border-slate-700">
+          <h3 class="font-bold text-amber-400 mb-2">Phase Through Big Attacks</h3>
+          <p class="text-sm text-slate-300">When a boss telegraphs a massive attack, coordinate: everyone plays maximum Block. Intercept can redirect the weakest player's share to the tank.</p>
+        </div>
+        <div class="bg-slate-800 rounded-lg p-4 border border-slate-700">
+          <h3 class="font-bold text-amber-400 mb-2">Designate the Survivor</h3>
+          <p class="text-sm text-slate-300">Your tankiest character (Ironclad) should conserve HP when the team gets low. As long as one lives, everyone revives after the fight.</p>
+        </div>
+        <div class="bg-slate-800 rounded-lg p-4 border border-slate-700">
+          <h3 class="font-bold text-amber-400 mb-2">Burst at Thresholds</h3>
+          <p class="text-sm text-slate-300">Many bosses change behavior at HP thresholds. Coordinate burst damage to skip dangerous phases. Necrobinder's Doom helps finish bosses before their final enrage.</p>
+        </div>
+        <div class="bg-slate-800 rounded-lg p-4 border border-slate-700">
+          <h3 class="font-bold text-amber-400 mb-2">Don't Play Greedy</h3>
+          <p class="text-sm text-slate-300">In co-op, one player trying to optimize damage while the team needs Block can wipe the run. Survive first, optimize second. The math of scaled bosses punishes greed.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Act 1 -->
+    <section id="act1" class="scroll-mt-20 mt-10">
+      <h2 class="text-2xl font-bold text-amber-300 mb-4 not-prose">3. Act 1 Bosses</h2>
+
+      <div class="not-prose space-y-4">
+        <div class="bg-slate-800 rounded-lg p-5 border border-slate-700">
+          <h3 class="font-bold text-white text-lg mb-2">The Guardian</h3>
+          <p class="text-sm text-slate-300 mb-3">
+            The Guardian's defensive mode (activates after taking a set number of hits) is more punishing in co-op
+            because it can trigger from any player's attacks. <strong>Coordinate burst damage</strong> to skip the shielded phase.
+            When it enters defensive mode, use the time to set up Powers and Block — don't waste attacks into the shield.
+          </p>
+          <div class="flex flex-wrap gap-2">
+            <span class="bg-slate-700 text-slate-300 text-xs px-2 py-1 rounded">Coordinate attacks to skip shield phase</span>
+            <span class="bg-slate-700 text-slate-300 text-xs px-2 py-1 rounded">Set up Powers during defensive mode</span>
+            <span class="bg-slate-700 text-slate-300 text-xs px-2 py-1 rounded">Spread Block for Thorn damage</span>
+          </div>
+        </div>
+
+        <div class="bg-slate-800 rounded-lg p-5 border border-slate-700">
+          <h3 class="font-bold text-white text-lg mb-2">Hexaghost</h3>
+          <p class="text-sm text-slate-300 mb-3">
+            Hexaghost's opening Inferno deals damage proportional to each player's current HP.
+            Consider <em>intentionally</em> keeping HP low before the fight — the damage scales down significantly.
+            The constant Burns added to everyone's deck demand strong card draw and exhaust mechanics.
+          </p>
+          <div class="flex flex-wrap gap-2">
+            <span class="bg-slate-700 text-slate-300 text-xs px-2 py-1 rounded">Manage HP before fight for lower Inferno damage</span>
+            <span class="bg-slate-700 text-slate-300 text-xs px-2 py-1 rounded">Burn removal options for entire team</span>
+          </div>
+        </div>
+
+        <div class="bg-slate-800 rounded-lg p-5 border border-slate-700">
+          <h3 class="font-bold text-white text-lg mb-2">Slime Boss</h3>
+          <p class="text-sm text-slate-300 mb-3">
+            The split mechanic creates multiple slimes that attack <em>each player simultaneously</em>.
+            AoE damage from Defect (Lightning orbs) or Silent (Corpse Explosion equivalent) is extremely valuable.
+            Burst the boss to the smallest possible split HP threshold.
+          </p>
+          <div class="flex flex-wrap gap-2">
+            <span class="bg-slate-700 text-slate-300 text-xs px-2 py-1 rounded">AoE damage highly valued</span>
+            <span class="bg-slate-700 text-slate-300 text-xs px-2 py-1 rounded">Burst to minimize split count</span>
+            <span class="bg-slate-700 text-slate-300 text-xs px-2 py-1 rounded">Everyone needs Block after split</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Act 2 -->
+    <section id="act2" class="scroll-mt-20 mt-10">
+      <h2 class="text-2xl font-bold text-amber-300 mb-4 not-prose">4. Act 2 Bosses</h2>
+
+      <div class="not-prose space-y-4">
+        <div class="bg-slate-800 rounded-lg p-5 border border-slate-700">
+          <h3 class="font-bold text-white text-lg mb-2">Knowledge Demon</h3>
+          <p class="text-sm text-slate-300 mb-3">
+            HP: ~380 solo / <strong>900+ in 4-player co-op</strong>. Heals ~30 HP solo / <strong>~60 HP per heal in co-op</strong>.
+            Its gimmick forces penalty choices (fewer draws, damage per turn, reduced energy) that stack permanently.
+            <strong class="text-amber-300">End the fight quickly</strong> — slow-scaling decks are punished severely.
+            In co-op, each player gets their own penalty choice, so coordinate to pick penalties that hurt each deck the least.
+            Necrobinder's Doom threshold is excellent here — it bypasses the healing.
+          </p>
+          <div class="flex flex-wrap gap-2">
+            <span class="bg-slate-700 text-slate-300 text-xs px-2 py-1 rounded">Prioritize burst damage over scaling</span>
+            <span class="bg-slate-700 text-slate-300 text-xs px-2 py-1 rounded">Doom and Poison bypass healing</span>
+            <span class="bg-slate-700 text-slate-300 text-xs px-2 py-1 rounded">Each player picks least-harmful penalty</span>
+          </div>
+        </div>
+
+        <div class="bg-slate-800 rounded-lg p-5 border border-slate-700">
+          <h3 class="font-bold text-white text-lg mb-2">Bronze Automaton</h3>
+          <p class="text-sm text-slate-300 mb-3">
+            Hyper Beam is a massive AoE that hits every player. When the boss starts glowing, <strong>everyone goes full Block</strong>.
+            Steal its Stasis orbs (minions that it summons to power up) before the boss consumes them.
+            The Automaton's minions also attack all players, spreading damage wide.
+          </p>
+          <div class="flex flex-wrap gap-2">
+            <span class="bg-slate-700 text-slate-300 text-xs px-2 py-1 rounded">Full team Block on Hyper Beam turns</span>
+            <span class="bg-slate-700 text-slate-300 text-xs px-2 py-1 rounded">Kill Stasis orbs before consumed</span>
+          </div>
+        </div>
+
+        <div class="bg-slate-800 rounded-lg p-5 border border-slate-700">
+          <h3 class="font-bold text-white text-lg mb-2">The Collector</h3>
+          <p class="text-sm text-slate-300 mb-3">
+            Constantly summons minions that attack all players. AoE and multi-target damage are essential.
+            Debuff the Collector while clearing adds — if you ignore the minions, the cumulative damage overwhelms everyone.
+            Defect's Lightning orbs and Silent's multi-hit attacks shine here.
+          </p>
+          <div class="flex flex-wrap gap-2">
+            <span class="bg-slate-700 text-slate-300 text-xs px-2 py-1 rounded">AoE to clear minions</span>
+            <span class="bg-slate-700 text-slate-300 text-xs px-2 py-1 rounded">Debuff boss while clearing</span>
+            <span class="bg-slate-700 text-slate-300 text-xs px-2 py-1 rounded">Don't ignore adds — cumulative damage scales fast</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Act 3 -->
+    <section id="act3" class="scroll-mt-20 mt-10">
+      <h2 class="text-2xl font-bold text-amber-300 mb-4 not-prose">5. Act 3 Bosses</h2>
+
+      <div class="not-prose space-y-4">
+        <div class="bg-slate-800 rounded-lg p-5 border border-slate-700">
+          <h3 class="font-bold text-white text-lg mb-2">Time Eater</h3>
+          <p class="text-sm text-slate-300 mb-3">
+            Forces card-play limits on the <em>entire team collectively</em> — the 12-card count is shared across all players.
+            <strong>This is the biggest co-op trap.</strong> Don't play low-value cards. Coordinate so the team stays under the cap.
+            High-impact expensive cards are better than cheap cycle. The time-warp effect restores its HP in co-op too.
+          </p>
+          <div class="flex flex-wrap gap-2">
+            <span class="bg-slate-700 text-slate-300 text-xs px-2 py-1 rounded">Shared card-play cap — coordinate carefully</span>
+            <span class="bg-slate-700 text-slate-300 text-xs px-2 py-1 rounded">Prioritize high-impact expensive cards</span>
+            <span class="bg-slate-700 text-slate-300 text-xs px-2 py-1 rounded">Burst during vulnerable windows</span>
+          </div>
+        </div>
+
+        <div class="bg-slate-800 rounded-lg p-5 border border-slate-700">
+          <h3 class="font-bold text-white text-lg mb-2">Awakened One</h3>
+          <p class="text-sm text-slate-300 mb-3">
+            Two-phase fight with cultists that attack all players. Phase 1: kill cultists while managing the boss.
+            Phase 2: the boss buffs when you play Powers — in co-op, four players playing Powers stacks the buff <strong>four times faster</strong>.
+            Be extremely selective about Powers. Regent's Star burst is perfect for skipping the dangerous second phase.
+          </p>
+          <div class="flex flex-wrap gap-2">
+            <span class="bg-slate-700 text-slate-300 text-xs px-2 py-1 rounded">Limit Power usage — 4x faster scaling</span>
+            <span class="bg-slate-700 text-slate-300 text-xs px-2 py-1 rounded">Clear cultists before phase transition</span>
+            <span class="bg-slate-700 text-slate-300 text-xs px-2 py-1 rounded">Burst through phase 2 quickly</span>
+          </div>
+        </div>
+
+        <div class="bg-slate-800 rounded-lg p-5 border border-slate-700">
+          <h3 class="font-bold text-white text-lg mb-2">Donu &amp; Deca</h3>
+          <p class="text-sm text-slate-300 mb-3">
+            Two bosses that buff each other. In co-op, <strong>focus fire is mandatory</strong>. Pick one (usually Donu — the buffer)
+            and everyone attacks it until it's dead. Splitting damage between both prolongs the fight and lets their scaling spiral out of control.
+            Debuffs apply to both, so Silent and Necrobinder can lock down both targets simultaneously.
+          </p>
+          <div class="flex flex-wrap gap-2">
+            <span class="bg-slate-700 text-slate-300 text-xs px-2 py-1 rounded">Focus fire on Donu (buffer) first</span>
+            <span class="bg-slate-700 text-slate-300 text-xs px-2 py-1 rounded">Debuffs work on both</span>
+            <span class="bg-slate-700 text-slate-300 text-xs px-2 py-1 rounded">Team Block for double attacks</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Ascension 10 Double Boss -->
+      <div class="not-prose bg-red-900/20 border border-red-700/40 rounded-lg p-4 mt-4">
+        <p class="text-sm text-red-300"><strong>Ascension 10:</strong> You fight two Act 3 bosses back-to-back. The entire team must conserve resources across both fights. Don't burn all potions and exhaust cards on the first boss — plan for a marathon, not a sprint.</p>
+      </div>
+    </section>
+
+    <!-- Secret Boss -->
+    <section id="secret" class="scroll-mt-20 mt-10">
+      <h2 class="text-2xl font-bold text-amber-300 mb-4 not-prose">6. Secret Boss: The Fake Merchant</h2>
+
+      <div class="not-prose bg-slate-800 rounded-lg p-5 border border-amber-600/40 mb-4">
+        <h3 class="font-bold text-amber-400 text-lg mb-3">How to Trigger</h3>
+        <ol class="text-sm text-slate-300 space-y-1 list-decimal list-inside ml-2">
+          <li>Get <strong>Foul Potions</strong> from the Potion Courier event (Act 2 or 3)</li>
+          <li>Throw one at the <strong>fake merchant</strong> (he has subtly different dialogue)</li>
+          <li>The real merchant only gives 100 gold for a Foul Potion — don't waste it on him</li>
+        </ol>
+      </div>
+
+      <div class="not-prose grid gap-4 md:grid-cols-2">
+        <div class="bg-slate-800 rounded-lg p-4 border border-slate-700">
+          <h4 class="font-bold text-white mb-2">Fight Details</h4>
+          <ul class="text-sm text-slate-300 space-y-1">
+            <li>HP: ~165 (moderate, not heavily scaled)</li>
+            <li>Attacks: 9-20 damage per hit</li>
+            <li>No unique gimmicks — straightforward fight</li>
+            <li>Mid-tier difficulty</li>
+          </ul>
+        </div>
+        <div class="bg-slate-800 rounded-lg p-4 border border-slate-700">
+          <h4 class="font-bold text-white mb-2">Rewards</h4>
+          <ul class="text-sm text-slate-300 space-y-1">
+            <li>4-6 free (lesser) Relics</li>
+            <li>300 gold (split among players)</li>
+            <li>Worth triggering whenever possible</li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="text-sm text-slate-400 mt-4">In co-op, one player can carry the Foul Potion while others stock combat potions. The fight itself is manageable, and the relic/gold payoff is massive for the whole team.</p>
+    </section>
+
+    <!-- Elites -->
+    <section id="elites" class="scroll-mt-20 mt-10">
+      <h2 class="text-2xl font-bold text-amber-300 mb-4 not-prose">7. Elite Fights in Co-op</h2>
+
+      <p>
+        Elites are <strong>even more rewarding</strong> in co-op than solo. Each elite drops relics for every player,
+        effectively multiplying the value of elite hunting. However, they're also proportionally more dangerous.
+      </p>
+
+      <div class="not-prose grid gap-4 md:grid-cols-2 mt-4">
+        <div class="bg-green-900/20 border border-green-700/40 rounded-lg p-4">
+          <h3 class="font-bold text-green-400 mb-2">Why Hunt Elites</h3>
+          <ul class="text-sm text-green-300 space-y-1">
+            <li>1 relic per player per elite — 4 relics for a 4-player team</li>
+            <li>Gold for everyone</li>
+            <li>Higher rare card drop chance</li>
+            <li>Early elites = more relics across the whole run</li>
+          </ul>
+        </div>
+        <div class="bg-red-900/20 border border-red-700/40 rounded-lg p-4">
+          <h3 class="font-bold text-red-400 mb-2">When to Avoid Elites</h3>
+          <ul class="text-sm text-red-300 space-y-1">
+            <li>Teammates are below 50% HP</li>
+            <li>Deck lacks Block consistency</li>
+            <li>No potions available</li>
+            <li>Right before the Act boss (play safe)</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="not-prose bg-slate-800 rounded-lg p-4 mt-4 border border-slate-700">
+        <p class="text-sm text-slate-300">
+          <strong class="text-amber-400">Ascension 1 note:</strong> Swarming Elites (Ascension 1 modifier) makes elites spawn more often.
+          This is actually <em>beneficial</em> in co-op — more elites = more relics = stronger team.
+          Build your deck with elite hunting in mind at higher Ascension.
+        </p>
+      </div>
+    </section>
+  </article>
+
+  <div class="not-prose mt-12 flex justify-between items-center">
+    <a href="/coop/card-synergies/" class="text-amber-400 hover:underline">&larr; Card Synergies</a>
+    <a href="/coop/advanced-tips/" class="inline-block bg-amber-600 hover:bg-amber-500 text-black font-bold px-6 py-3 rounded-lg transition-colors">
+      Advanced Tips: Master Co-op &rarr;
+    </a>
+  </div>
+</BaseLayout>

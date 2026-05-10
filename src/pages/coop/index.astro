@@ -1,0 +1,325 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Slay the Spire 2 Co-op Guide &mdash; How Multiplayer Works"
+  description="Complete Slay the Spire 2 co-op guide: how multiplayer works, core mechanics, enemy scaling, shared debuffs, revival rules, Mend, map voting, and 10 essential tips for 2-4 player runs."
+>
+  <article class="prose prose-invert max-w-none">
+    <h1 class="text-3xl md:text-4xl font-bold text-amber-400 not-prose mb-6">
+      Slay the Spire 2 Co-op Guide: How Multiplayer Works
+    </h1>
+
+    <p class="lead text-lg text-slate-300">
+      Slay the Spire 2 introduces <strong>4-player online co-op</strong> for the first time in the series.
+      Each player controls their own character with independent decks, but shares the map, enemies, and victory conditions.
+      This guide covers everything you need to know about multiplayer mechanics.
+    </p>
+
+    <!-- TOC -->
+    <nav class="not-prose bg-slate-800 rounded-lg p-4 border border-slate-700 my-8" aria-label="Table of Contents">
+      <h2 class="text-lg font-bold text-amber-400 mb-3">Table of Contents</h2>
+      <ol class="text-sm space-y-1 text-slate-300 list-decimal list-inside">
+        <li><a href="#getting-started" class="hover:text-amber-400">Getting Started</a></li>
+        <li><a href="#core-mechanics" class="hover:text-amber-400">Core Multiplayer Mechanics</a></li>
+        <li><a href="#death-revival" class="hover:text-amber-400">Death &amp; Revival</a></li>
+        <li><a href="#rest-sites" class="hover:text-amber-400">Rest Sites &amp; Mend</a></li>
+        <li><a href="#relic-drafting" class="hover:text-amber-400">Relic Drafting</a></li>
+        <li><a href="#map-voting" class="hover:text-amber-400">Map Voting &amp; Pathing</a></li>
+        <li><a href="#coop-cards" class="hover:text-amber-400">Co-op Exclusive Cards</a></li>
+        <li><a href="#essential-tips" class="hover:text-amber-400">10 Essential Multiplayer Tips</a></li>
+      </ol>
+    </nav>
+
+    <!-- Section 1: Getting Started -->
+    <section id="getting-started" class="scroll-mt-20">
+      <h2 class="text-2xl font-bold text-amber-300 mb-4 not-prose">1. Getting Started</h2>
+
+      <h3 class="text-xl font-semibold text-white mb-2 not-prose">How to Start a Multiplayer Game</h3>
+      <ol class="space-y-2 list-decimal list-outside ml-5">
+        <li>Make sure you and your friends are <strong>Steam friends</strong></li>
+        <li>From the main menu, choose <strong>Multiplayer</strong></li>
+        <li>One player selects <strong>Host</strong>; everyone else selects <strong>Join</strong></li>
+        <li>Each player picks a character — duplicates are allowed but <strong>not recommended</strong></li>
+        <li>Save files can be shared or created fresh</li>
+      </ol>
+
+      <div class="not-prose bg-amber-900/30 border border-amber-600/40 rounded-lg p-4 my-4">
+        <p class="text-sm text-amber-300"><strong>Important:</strong> There is currently <strong>no matchmaking</strong> or local couch co-op. You can only play with Steam friends. The host must have a stable internet connection and stay connected for the entire run.</p>
+      </div>
+
+      <h3 class="text-xl font-semibold text-white mb-2 not-prose">Available Characters (Early Access)</h3>
+      <ul class="space-y-2 list-none pl-0">
+        <li><strong class="text-red-400">Ironclad</strong> — Tank, self-healing, high HP, massive Block</li>
+        <li><strong class="text-green-400">Silent</strong> — Debuffer, Poison DPS, applies Vulnerable/Weak for the team</li>
+        <li><strong class="text-blue-400">Defect</strong> — Scaling DPS, Orb utility (Lightning/Frost/Plasma)</li>
+        <li><strong class="text-purple-400">Necrobinder</strong> — Board control, off-tank (Osty bodyguard), Doom debuff</li>
+        <li><strong class="text-yellow-400">Regent</strong> — Burst damage, Stars system for massive single-turn kills</li>
+      </ul>
+    </section>
+
+    <!-- Section 2: Core Mechanics -->
+    <section id="core-mechanics" class="scroll-mt-20 mt-10">
+      <h2 class="text-2xl font-bold text-amber-300 mb-4 not-prose">2. Core Multiplayer Mechanics</h2>
+
+      <div class="not-prose overflow-x-auto">
+        <table class="w-full text-left border-collapse bg-slate-800 rounded-lg overflow-hidden">
+          <thead class="bg-slate-700">
+            <tr>
+              <th class="p-3 font-semibold text-amber-400">Mechanic</th>
+              <th class="p-3 font-semibold text-amber-400">How It Works</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-700">
+            <tr>
+              <td class="p-3 font-medium text-white whitespace-nowrap">Enemy Scaling</td>
+              <td class="p-3">Enemy HP and damage scale with the number of players. More players = beefier enemies. HP scales approximately +30% per additional player.</td>
+            </tr>
+            <tr>
+              <td class="p-3 font-medium text-white whitespace-nowrap">Shared Debuffs</td>
+              <td class="p-3"><strong class="text-amber-300">This is the most important co-op mechanic.</strong> Vulnerable, Weak, Poison, and Doom applied by one player benefit the <em>entire team</em>. Poison and Doom bypass Block.</td>
+            </tr>
+            <tr>
+              <td class="p-3 font-medium text-white whitespace-nowrap">Simultaneous Turns</td>
+              <td class="p-3">All players act at the same time. Communication is critical to avoid wasting resources — debuff first, then attack.</td>
+            </tr>
+            <tr>
+              <td class="p-3 font-medium text-white whitespace-nowrap">Individual Resources</td>
+              <td class="p-3">Each player manages their own deck, relics, energy pool, and gold. Merchant inventory and card rewards are unique to each player.</td>
+            </tr>
+            <tr>
+              <td class="p-3 font-medium text-white whitespace-nowrap">Potions</td>
+              <td class="p-3">"Throwing" potions can be used on teammates to heal or buff them. "Drink" potions are self-only. Save thrown potions for clutch saves.</td>
+            </tr>
+            <tr>
+              <td class="p-3 font-medium text-white whitespace-nowrap">Multiplayer Cards</td>
+              <td class="p-3">Every character has co-op exclusive cards that don't appear in solo mode. These enable team Block sharing, ally buffs, attack redirection, and more.</td>
+            </tr>
+            <tr>
+              <td class="p-3 font-medium text-white whitespace-nowrap">Elite Rewards</td>
+              <td class="p-3">Elites are even more rewarding in co-op — 4 relics distributed across the team from a single elite fight. Prioritize elites early.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Section 3: Death & Revival -->
+    <section id="death-revival" class="scroll-mt-20 mt-10">
+      <h2 class="text-2xl font-bold text-amber-300 mb-4 not-prose">3. Death &amp; Revival</h2>
+
+      <p>
+        When a player's HP reaches zero during combat, they are <strong>knocked out</strong> — not permanently dead.
+        The fight continues without them. After combat ends, if <strong>at least one teammate survives</strong>,
+        all dead players automatically revive with <strong>1 HP</strong>.
+      </p>
+
+      <p>
+        This "designated survivor" mechanic is the foundation of co-op survival strategy.
+        Your tankiest character should always play conservatively when the team is low.
+        A run only truly ends when <strong>every player falls</strong> in the same fight.
+      </p>
+
+      <div class="not-prose bg-green-900/30 border border-green-600/40 rounded-lg p-4 my-4">
+        <p class="text-sm text-green-300"><strong>Key takeaway:</strong> Funnel defensive resources (Block cards, potions, relics) to your tank when things get dicey. One survivor = everyone revives.</p>
+      </div>
+    </section>
+
+    <!-- Section 4: Rest Sites & Mend -->
+    <section id="rest-sites" class="scroll-mt-20 mt-10">
+      <h2 class="text-2xl font-bold text-amber-300 mb-4 not-prose">4. Rest Sites &amp; Mend</h2>
+
+      <p>
+        Rest Sites (campfires) gain a <strong>third option</strong> in multiplayer beyond the normal "Rest" (heal self) and "Upgrade":
+      </p>
+
+      <h3 class="text-xl font-semibold text-white mb-2 not-prose">Mend — Heal a Teammate</h3>
+      <p>
+        <strong>Mend</strong> allows you to sacrifice your own Rest action to heal <strong>another player for 30% of their maximum HP</strong>.
+        This is a strategic trade-off: you give up your own heal or upgrade opportunity to keep a struggling teammate alive.
+      </p>
+
+      <ul class="space-y-1 mt-3">
+        <li>Use Mend when a teammate revives with 1 HP after a tough fight — getting them back to safe HP range is more valuable than healing yourself</li>
+        <li>The <strong>Miniature Tent</strong> relic is particularly strong in co-op, potentially allowing a double heal on an ally</li>
+        <li>Full party healing occurs at the <strong>start of each new Act</strong></li>
+      </ul>
+    </section>
+
+    <!-- Section 5: Relic Drafting -->
+    <section id="relic-drafting" class="scroll-mt-20 mt-10">
+      <h2 class="text-2xl font-bold text-amber-300 mb-4 not-prose">5. Relic Drafting</h2>
+
+      <p>
+        When the team opens a chest (or defeats an elite), the game presents <strong>one relic per player</strong>.
+        If two players want the same relic, a <strong>rock-paper-scissors</strong> tiebreaker decides who gets it.
+      </p>
+
+      <h3 class="text-xl font-semibold text-white mb-2 not-prose">Drafting Strategy</h3>
+      <ul class="space-y-1 mt-3">
+        <li><strong>Communicate before clicking.</strong> Don't let the fastest clicker grab everything</li>
+        <li>Give Strength/Damage relics to your DPS</li>
+        <li>Give Block/HP relics to your tank</li>
+        <li>Give Energy/Utility relics to your debuffer or orb character</li>
+        <li>Avoid duplicate classes — they compete for the same class-specific relics, effectively halving your team's relic income</li>
+      </ul>
+    </section>
+
+    <!-- Section 6: Map Voting -->
+    <section id="map-voting" class="scroll-mt-20 mt-10">
+      <h2 class="text-2xl font-bold text-amber-300 mb-4 not-prose">6. Map Voting &amp; Pathing</h2>
+
+      <p>
+        In co-op, the team votes on which path to take. Ties are broken randomly. You can draw on the map to suggest routes to your team.
+      </p>
+
+      <h3 class="text-xl font-semibold text-white mb-2 not-prose">Pathing Tips</h3>
+      <ul class="space-y-1 mt-3">
+        <li>If one player is struggling with low HP, prioritize a <strong>Rest Site</strong> over an Elite fight</li>
+        <li><strong>Negotiate</strong> rather than forcing selfish routes</li>
+        <li>Take <strong>elites early</strong> — the relic payoff is multiplied in co-op</li>
+        <li>The Golden Compass (Act 2 Tezcatara boon) replaces the map with a single linear path the whole party must follow</li>
+      </ul>
+    </section>
+
+    <!-- Section 7: Co-op Exclusive Cards -->
+    <section id="coop-cards" class="scroll-mt-20 mt-10">
+      <h2 class="text-2xl font-bold text-amber-300 mb-4 not-prose">7. Co-op Exclusive Cards</h2>
+
+      <p>
+        Every character has multiplayer-exclusive cards that <strong>do not appear in solo mode</strong>.
+        These cards create team synergies that transform how you build decks.
+      </p>
+
+      <div class="not-prose grid gap-4 md:grid-cols-2 my-4">
+        <div class="bg-slate-800 rounded-lg p-4 border border-slate-700">
+          <h4 class="font-bold text-amber-400 mb-2">Rally</h4>
+          <p class="text-sm text-slate-300">ALL players gain 12 Block. One of the most universally useful co-op cards.</p>
+        </div>
+        <div class="bg-slate-800 rounded-lg p-4 border border-slate-700">
+          <h4 class="font-bold text-amber-400 mb-2">Coordinate</h4>
+          <p class="text-sm text-slate-300">Give another player +5 Strength this turn. Enables devastating coordinated attacks.</p>
+        </div>
+        <div class="bg-slate-800 rounded-lg p-4 border border-slate-700">
+          <h4 class="font-bold text-amber-400 mb-2">Gang Up</h4>
+          <p class="text-sm text-slate-300">Deals bonus damage for each time another player attacked that enemy this turn.</p>
+        </div>
+        <div class="bg-slate-800 rounded-lg p-4 border border-slate-700">
+          <h4 class="font-bold text-amber-400 mb-2">Beacon of Hope</h4>
+          <p class="text-sm text-slate-300">Whenever you gain Block, other players gain half as much. Turns tanks into team protectors.</p>
+        </div>
+        <div class="bg-slate-800 rounded-lg p-4 border border-slate-700">
+          <h4 class="font-bold text-amber-400 mb-2">Intercept</h4>
+          <p class="text-sm text-slate-300">Gain 9 Block and redirect all attacks from a teammate to yourself. Clutch save tool.</p>
+        </div>
+        <div class="bg-slate-800 rounded-lg p-4 border border-slate-700">
+          <h4 class="font-bold text-amber-400 mb-2">Flanking</h4>
+          <p class="text-sm text-slate-300">Targeted enemy takes double damage from other players for the rest of the turn. (Silent exclusive)</p>
+        </div>
+        <div class="bg-slate-800 rounded-lg p-4 border border-slate-700">
+          <h4 class="font-bold text-amber-400 mb-2">Lift</h4>
+          <p class="text-sm text-slate-300">Give another player 11 Block. Simple but efficient protection.</p>
+        </div>
+      </div>
+
+      <p>
+        <a href="/coop/card-synergies/" class="text-amber-400 hover:underline font-semibold">
+          See the full co-op card synergies guide &rarr;
+        </a>
+      </p>
+    </section>
+
+    <!-- Section 8: 10 Essential Tips -->
+    <section id="essential-tips" class="scroll-mt-20 mt-10">
+      <h2 class="text-2xl font-bold text-amber-300 mb-4 not-prose">8. 10 Essential Multiplayer Tips</h2>
+
+      <div class="space-y-4 not-prose">
+        <div class="bg-slate-800 rounded-lg p-4 border border-slate-700">
+          <h3 class="font-bold text-amber-400">Tip 1: Build a Balanced Party</h3>
+          <p class="text-sm text-slate-300 mt-1">Coordinate roles before the run starts. Don't run four glass cannons. Aim for at least one tank and one debuffer. Ironclad (tank) + Silent (debuffer) is the safest starting pair for new co-op players.</p>
+        </div>
+
+        <div class="bg-slate-800 rounded-lg p-4 border border-slate-700">
+          <h3 class="font-bold text-amber-400">Tip 2: Slow Down &amp; Coordinate Plays</h3>
+          <p class="text-sm text-slate-300 mt-1">Everyone acts simultaneously. Use voice chat. Call out debuffs first — don't waste damage before Vulnerable is applied.</p>
+        </div>
+
+        <div class="bg-slate-800 rounded-lg p-4 border border-slate-700">
+          <h3 class="font-bold text-amber-400">Tip 3: Debuffs Benefit Everyone</h3>
+          <p class="text-sm text-slate-300 mt-1">Apply Vulnerable and Weak at the start of every turn. Poison and Doom bypass Block and work across the entire team. This is the single highest-impact mechanic in co-op.</p>
+        </div>
+
+        <div class="bg-slate-800 rounded-lg p-4 border border-slate-700">
+          <h3 class="font-bold text-amber-400">Tip 4: Communicate Relic Picks</h3>
+          <p class="text-sm text-slate-300 mt-1">When chests open, talk through who gets each relic. Match relics to roles — Strength to DPS, Block to tank. Don't fight over the same relic; it wastes team potential.</p>
+        </div>
+
+        <div class="bg-slate-800 rounded-lg p-4 border border-slate-700">
+          <h3 class="font-bold text-amber-400">Tip 5: Draft Multiplayer-Specific Cards</h3>
+          <p class="text-sm text-slate-300 mt-1">Co-op exclusive cards (Rally, Intercept, Flanking, etc.) are often run-defining. They don't appear in solo mode, so don't skip them out of habit.</p>
+        </div>
+
+        <div class="bg-slate-800 rounded-lg p-4 border border-slate-700">
+          <h3 class="font-bold text-amber-400">Tip 6: Throw Potions on Teammates</h3>
+          <p class="text-sm text-slate-300 mt-1">Throwing potions can heal or buff allies in trouble. Save them for clutch moments — a well-timed thrown potion can save a run.</p>
+        </div>
+
+        <div class="bg-slate-800 rounded-lg p-4 border border-slate-700">
+          <h3 class="font-bold text-amber-400">Tip 7: Build Synergies Across the Team</h3>
+          <p class="text-sm text-slate-300 mt-1">Certain class pairings excel beyond the sum of their parts. Ironclad + Silent covers everything. Necrobinder + Regent has the highest damage ceiling. See our <a href="/coop/character-combos/" class="text-amber-400 hover:underline">Character Combos guide</a>.</p>
+        </div>
+
+        <div class="bg-slate-800 rounded-lg p-4 border border-slate-700">
+          <h3 class="font-bold text-amber-400">Tip 8: Have a Designated Survivor</h3>
+          <p class="text-sm text-slate-300 mt-1">As long as one player survives, everyone revives. Your tankiest character should play conservatively when the team is low. Funnel defensive resources to them.</p>
+        </div>
+
+        <div class="bg-slate-800 rounded-lg p-4 border border-slate-700">
+          <h3 class="font-bold text-amber-400">Tip 9: Choose Your Map Path Wisely</h3>
+          <p class="text-sm text-slate-300 mt-1">Vote with the team's collective health in mind. If a teammate is struggling, a Rest Site is worth more than an Elite. Negotiate — don't force selfish routes.</p>
+        </div>
+
+        <div class="bg-slate-800 rounded-lg p-4 border border-slate-700">
+          <h3 class="font-bold text-amber-400">Tip 10: Play More to Unlock</h3>
+          <p class="text-sm text-slate-300 mt-1">Progress in co-op unlocks new Epochs, cards, relics, and potions — just like solo play. Complete solo runs on the side to practice characters and unlock more options for multiplayer.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quick Do's and Don'ts -->
+    <section class="mt-10 not-prose">
+      <h2 class="text-2xl font-bold text-amber-300 mb-4">Quick Do's and Don'ts</h2>
+      <div class="grid gap-4 md:grid-cols-2">
+        <div class="bg-green-900/20 border border-green-700/40 rounded-lg p-4">
+          <h3 class="font-bold text-green-400 mb-2">✅ DO</h3>
+          <ul class="text-sm text-green-300 space-y-1">
+            <li>Assign roles (tank, debuffer, DPS) before Act 1</li>
+            <li>Stack debuffs on turn 1 before the team unloads damage</li>
+            <li>Take Elites early — relic value is multiplied in co-op</li>
+            <li>Use the host with the best wired internet</li>
+            <li>Communicate relic picks before clicking</li>
+          </ul>
+        </div>
+        <div class="bg-red-900/20 border border-red-700/40 rounded-lg p-4">
+          <h3 class="font-bold text-red-400 mb-2">❌ DON'T</h3>
+          <ul class="text-sm text-red-300 space-y-1">
+            <li>Run duplicate characters — relic competition kills efficiency</li>
+            <li>Play with mods enabled — they cause desyncs in co-op</li>
+            <li>Ignore multiplayer-specific cards in rewards</li>
+            <li>Attack before debuffs are applied</li>
+            <li>Force selfish map routes when teammates need Rest Sites</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </article>
+
+  <!-- Next page link -->
+  <div class="not-prose mt-12 text-center">
+    <p class="text-slate-400 mb-3">Continue reading:</p>
+    <a href="/coop/character-combos/" class="inline-block bg-amber-600 hover:bg-amber-500 text-black font-bold px-6 py-3 rounded-lg transition-colors">
+      Character Combos: Best Team Compositions &rarr;
+    </a>
+  </div>
+</BaseLayout>

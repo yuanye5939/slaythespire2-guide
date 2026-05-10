@@ -1,0 +1,407 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Slay the Spire 2 Co-op Character Combos &mdash; Best Team Compositions"
+  description="Best Slay the Spire 2 co-op character combinations ranked: 2-player duos, 3-player trios, 4-player squads. Synergy matrix, role framework (Anchor/Force Multiplier/Specialist), and team comp tier list."
+>
+  <article class="prose prose-invert max-w-none">
+    <h1 class="text-3xl md:text-4xl font-bold text-amber-400 not-prose mb-6">
+      Character Combos: Best Team Compositions
+    </h1>
+
+    <p class="lead text-lg text-slate-300">
+      Building the right team is the single most important decision in co-op. This guide covers
+      the role framework, every 2-player synergy, and the best compositions for 2/3/4-player runs.
+    </p>
+
+    <nav class="not-prose bg-slate-800 rounded-lg p-4 border border-slate-700 my-8" aria-label="Table of Contents">
+      <h2 class="text-lg font-bold text-amber-400 mb-3">Table of Contents</h2>
+      <ol class="text-sm space-y-1 text-slate-300 list-decimal list-inside">
+        <li><a href="#role-framework" class="hover:text-amber-400">Role Framework: Anchor / Force Multiplier / Specialist</a></li>
+        <li><a href="#character-roles" class="hover:text-amber-400">Character Role Breakdown</a></li>
+        <li><a href="#duo-tier" class="hover:text-amber-400">Best 2-Player Duos — Tier List</a></li>
+        <li><a href="#synergy-matrix" class="hover:text-amber-400">Full 2-Player Synergy Matrix</a></li>
+        <li><a href="#trios" class="hover:text-amber-400">3-Player Compositions</a></li>
+        <li><a href="#four-player" class="hover:text-amber-400">4-Player Full Squads</a></li>
+        <li><a href="#quick-pick" class="hover:text-amber-400">Pick Based on Playstyle</a></li>
+      </ol>
+    </nav>
+
+    <!-- Role Framework -->
+    <section id="role-framework" class="scroll-mt-20">
+      <h2 class="text-2xl font-bold text-amber-300 mb-4 not-prose">1. Role Framework</h2>
+
+      <p>
+        Successful co-op teams are built on three roles. Every composition should cover as many as possible.
+      </p>
+
+      <div class="not-prose grid gap-4 md:grid-cols-3 my-6">
+        <div class="bg-slate-800 rounded-lg p-5 border-t-2 border-red-500">
+          <h3 class="font-bold text-red-400 text-lg mb-2">The Anchor</h3>
+          <p class="text-sm text-slate-300">The team's survival insurance. When things go wrong and half the team is dead, the Anchor turtles up, survives, and triggers the auto-revive for everyone. Highest HP, best Block, self-healing.</p>
+          <p class="text-sm text-red-400 mt-3 font-semibold">Best: Ironclad</p>
+          <p class="text-sm text-slate-500">Also: Necrobinder (off-tank)</p>
+        </div>
+
+        <div class="bg-slate-800 rounded-lg p-5 border-t-2 border-green-500">
+          <h3 class="font-bold text-green-400 text-lg mb-2">The Force Multiplier</h3>
+          <p class="text-sm text-slate-300">Makes the entire team hit harder and survive longer by applying Vulnerable, Weak, and Poison that benefit everyone. Not about personal damage — about amplifying the team's output.</p>
+          <p class="text-sm text-green-400 mt-3 font-semibold">Best: Silent</p>
+          <p class="text-sm text-slate-500">Also: Necrobinder (Doom)</p>
+        </div>
+
+        <div class="bg-slate-800 rounded-lg p-5 border-t-2 border-blue-500">
+          <h3 class="font-bold text-blue-400 text-lg mb-2">The Specialist</h3>
+          <p class="text-sm text-slate-300">Brings unique mechanics that solve specific problems. Burst damage for bosses, orb scaling for long fights, board control for multi-enemy rooms.</p>
+          <p class="text-sm text-blue-400 mt-3 font-semibold">Best: Regent (burst), Defect (scaling)</p>
+          <p class="text-sm text-slate-500">Also: Necrobinder (board control)</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Character Role Breakdown -->
+    <section id="character-roles" class="scroll-mt-20 mt-10">
+      <h2 class="text-2xl font-bold text-amber-300 mb-4 not-prose">2. Character Role Breakdown</h2>
+
+      <div class="not-prose overflow-x-auto">
+        <table class="w-full text-left border-collapse bg-slate-800 rounded-lg overflow-hidden">
+          <thead class="bg-slate-700">
+            <tr>
+              <th class="p-3 font-semibold text-amber-400">Character</th>
+              <th class="p-3 font-semibold text-amber-400">Role</th>
+              <th class="p-3 font-semibold text-amber-400">Co-op Strengths</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-700">
+            <tr>
+              <td class="p-3 font-bold text-red-400">Ironclad</td>
+              <td class="p-3">Tank / Anchor</td>
+              <td class="p-3">Highest HP pool, Burning Blood self-heals after every fight, stacks massive Block. Can survive alone when the team falls. Best "last player standing."</td>
+            </tr>
+            <tr>
+              <td class="p-3 font-bold text-green-400">Silent</td>
+              <td class="p-3">Debuffer / Force Multiplier</td>
+              <td class="p-3">Consistently applies Vulnerable &amp; Weak for the whole team. Poison ticks bypass Block. "Borderline mandatory" for optimal teams — her debuffs break the math of co-op combat.</td>
+            </tr>
+            <tr>
+              <td class="p-3 font-bold text-blue-400">Defect</td>
+              <td class="p-3">Scaling DPS / Utility</td>
+              <td class="p-3">Orbs generate passive damage (Lightning), Block (Frost), and shared Energy (Plasma). Lowest coordination overhead — orbs work passively while teammates execute their plans.</td>
+            </tr>
+            <tr>
+              <td class="p-3 font-bold text-purple-400">Necrobinder</td>
+              <td class="p-3">Board Control / Off-Tank</td>
+              <td class="p-3">Osty bodyguard absorbs hits that would cripple the team. Doom sets team-wide instant-kill thresholds. Combines elements of Anchor and Force Multiplier.</td>
+            </tr>
+            <tr>
+              <td class="p-3 font-bold text-yellow-400">Regent</td>
+              <td class="p-3">Burst DPS</td>
+              <td class="p-3">Stars accumulate across turns for massive burst detonations. The highest single-target damage potential in the game. Needs teammates to buy setup time during vulnerable Star-build turns.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Duo Tier List -->
+    <section id="duo-tier" class="scroll-mt-20 mt-10">
+      <h2 class="text-2xl font-bold text-amber-300 mb-4 not-prose">3. Best 2-Player Duos — Tier List</h2>
+
+      <!-- S-Tier -->
+      <div class="not-prose mb-6">
+        <h3 class="text-lg font-bold text-amber-400 mb-3">S-Tier — Optimal Synergies</h3>
+
+        <div class="bg-slate-800 rounded-lg p-5 border border-amber-600/40 mb-4">
+          <div class="flex items-center gap-2 mb-3">
+            <span class="text-red-400 font-bold">Ironclad</span>
+            <span class="text-slate-500">+</span>
+            <span class="text-green-400 font-bold">Silent</span>
+            <span class="bg-amber-600/20 text-amber-400 text-xs px-2 py-0.5 rounded ml-2">Safest Starter Pair</span>
+          </div>
+          <p class="text-sm text-slate-300">The classic Tank + Debuffer combination. Ironclad tanks and stacks Block while Silent applies Vulnerable/Weak. Silent's debuffs amplify Ironclad's attacks. Extremely forgiving for new co-op players. Covers all essential roles with just two characters. <strong class="text-white">Start here if you're new to co-op.</strong></p>
+        </div>
+
+        <div class="bg-slate-800 rounded-lg p-5 border border-amber-600/40">
+          <div class="flex items-center gap-2 mb-3">
+            <span class="text-purple-400 font-bold">Necrobinder</span>
+            <span class="text-slate-500">+</span>
+            <span class="text-yellow-400 font-bold">Regent</span>
+            <span class="bg-red-900/40 text-red-400 text-xs px-2 py-0.5 rounded ml-2">Highest Damage Ceiling</span>
+          </div>
+          <p class="text-sm text-slate-300">The burst damage dream team. Necrobinder's Osty absorbs hits during Regent's vulnerable Star-setup turns. Once Stars are online, combined burst (Regent detonation + Necrobinder's Doom thresholds) can one-cycle bosses. <strong class="text-white">Requires precise coordination</strong> but pays off with the highest damage potential in the game.</p>
+        </div>
+      </div>
+
+      <!-- A-Tier -->
+      <div class="not-prose mb-6">
+        <h3 class="text-lg font-bold text-amber-400 mb-3">A-Tier — Strong &amp; Reliable</h3>
+
+        <div class="bg-slate-800 rounded-lg p-5 border border-slate-700 mb-3">
+          <div class="flex items-center gap-2 mb-3">
+            <span class="text-green-400 font-bold">Silent</span>
+            <span class="text-slate-500">+</span>
+            <span class="text-purple-400 font-bold">Necrobinder</span>
+            <span class="bg-slate-700 text-slate-400 text-xs px-2 py-0.5 rounded ml-2">Resource Loop</span>
+          </div>
+          <p class="text-sm text-slate-300">Cards Silent discards feed Necrobinder's retrieval mechanics, creating free resources across both turns. Silent's Poison ticks push enemies past Necrobinder's Doom kill thresholds between turns. Flexible and not locked into strict timing windows.</p>
+        </div>
+
+        <div class="bg-slate-800 rounded-lg p-5 border border-slate-700 mb-3">
+          <div class="flex items-center gap-2 mb-3">
+            <span class="text-red-400 font-bold">Ironclad</span>
+            <span class="text-slate-500">+</span>
+            <span class="text-blue-400 font-bold">Defect</span>
+            <span class="bg-slate-700 text-slate-400 text-xs px-2 py-0.5 rounded ml-2">Low Coordination</span>
+          </div>
+          <p class="text-sm text-slate-300">The reliable generalist pair. Ironclad handles single targets, Defect's Lightning orbs clear multi-enemy rooms. Plasma orbs share energy with the team. Lowest coordination overhead — run your own builds and still succeed. Ideal for casual play.</p>
+        </div>
+
+        <div class="bg-slate-800 rounded-lg p-5 border border-slate-700">
+          <div class="flex items-center gap-2 mb-3">
+            <span class="text-green-400 font-bold">Silent</span>
+            <span class="text-slate-500">+</span>
+            <span class="text-yellow-400 font-bold">Regent</span>
+            <span class="bg-slate-700 text-slate-400 text-xs px-2 py-0.5 rounded ml-2">Debuff + Burst</span>
+          </div>
+          <p class="text-sm text-slate-300">Silent's Vulnerable amplifies Regent's Star-based burst. Less explosive than Necrobinder + Regent, but more survivable in early acts thanks to Silent's consistent debuff application.</p>
+        </div>
+      </div>
+
+      <!-- B-Tier -->
+      <div class="not-prose mb-6">
+        <h3 class="text-lg font-bold text-amber-400 mb-3">B-Tier — Viable but Situational</h3>
+
+        <div class="bg-slate-800 rounded-lg p-5 border border-slate-700 mb-3">
+          <div class="flex items-center gap-2 mb-3">
+            <span class="text-red-400 font-bold">Ironclad</span>
+            <span class="text-slate-500">+</span>
+            <span class="text-purple-400 font-bold">Necrobinder</span>
+          </div>
+          <p class="text-sm text-slate-300">Two tanks can survive almost anything but lack damage scaling. Works through sheer durability but fights drag on.</p>
+        </div>
+
+        <div class="bg-slate-800 rounded-lg p-5 border border-slate-700 mb-3">
+          <div class="flex items-center gap-2 mb-3">
+            <span class="text-red-400 font-bold">Ironclad</span>
+            <span class="text-slate-500">+</span>
+            <span class="text-yellow-400 font-bold">Regent</span>
+          </div>
+          <p class="text-sm text-slate-300">Tank protects Regent during setup, but lacks debuff support to maximize burst damage. Functional but misses synergy.</p>
+        </div>
+
+        <div class="bg-slate-800 rounded-lg p-5 border border-slate-700">
+          <div class="flex items-center gap-2 mb-3">
+            <span class="text-blue-400 font-bold">Defect</span>
+            <span class="text-slate-500">+</span>
+            <span class="text-purple-400 font-bold">Necrobinder</span>
+          </div>
+          <p class="text-sm text-slate-300">Orbs + board control provide solid defense, but both characters need time to scale — vulnerable to fast enemy combos.</p>
+        </div>
+      </div>
+
+      <!-- Avoid -->
+      <div class="not-prose">
+        <h3 class="text-lg font-bold text-red-400 mb-3">Avoid — Duplicate Classes</h3>
+        <div class="bg-red-900/20 border border-red-700/40 rounded-lg p-4">
+          <p class="text-sm text-red-300">Two of the same character compete for <strong>identical relics</strong> after elites, accumulate fewer unique relics, and provide no complementary mechanics. Two Ironclads means half the relic income split across two players. Always diversify.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Synergy Matrix -->
+    <section id="synergy-matrix" class="scroll-mt-20 mt-10">
+      <h2 class="text-2xl font-bold text-amber-300 mb-4 not-prose">4. Full 2-Player Synergy Matrix</h2>
+      <p class="mb-4">Read as: your class (left column) paired with partner class (top row).</p>
+
+      <div class="not-prose overflow-x-auto">
+        <table class="w-full text-center border-collapse bg-slate-800 rounded-lg overflow-hidden text-sm">
+          <thead class="bg-slate-700">
+            <tr>
+              <th class="p-3 text-amber-400"></th>
+              <th class="p-3 text-red-400">Ironclad</th>
+              <th class="p-3 text-green-400">Silent</th>
+              <th class="p-3 text-blue-400">Defect</th>
+              <th class="p-3 text-purple-400">Necrobinder</th>
+              <th class="p-3 text-yellow-400">Regent</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-700">
+            <tr>
+              <td class="p-3 font-bold text-red-400">Ironclad</td>
+              <td class="p-3 text-red-400">✕</td>
+              <td class="p-3"><span class="bg-amber-600/20 text-amber-400 px-2 py-0.5 rounded font-bold">S</span><br><span class="text-xs text-slate-400">Tank+Debuff</span></td>
+              <td class="p-3"><span class="bg-green-600/20 text-green-400 px-2 py-0.5 rounded font-bold">A</span><br><span class="text-xs text-slate-400">Tank+Passive</span></td>
+              <td class="p-3"><span class="bg-green-600/20 text-green-400 px-2 py-0.5 rounded font-bold">A</span><br><span class="text-xs text-slate-400">Tank+Board</span></td>
+              <td class="p-3"><span class="bg-slate-600/40 text-slate-300 px-2 py-0.5 rounded">B</span><br><span class="text-xs text-slate-400">Tank+Burst</span></td>
+            </tr>
+            <tr>
+              <td class="p-3 font-bold text-green-400">Silent</td>
+              <td class="p-3"><span class="bg-amber-600/20 text-amber-400 px-2 py-0.5 rounded font-bold">S</span><br><span class="text-xs text-slate-400">Debuff+Tank</span></td>
+              <td class="p-3 text-red-400">✕</td>
+              <td class="p-3"><span class="bg-slate-600/40 text-slate-300 px-2 py-0.5 rounded">B</span><br><span class="text-xs text-slate-400">Discard+Orb</span></td>
+              <td class="p-3"><span class="bg-amber-600/20 text-amber-400 px-2 py-0.5 rounded font-bold">S</span><br><span class="text-xs text-slate-400">Resource Loop</span></td>
+              <td class="p-3"><span class="bg-green-600/20 text-green-400 px-2 py-0.5 rounded font-bold">A</span><br><span class="text-xs text-slate-400">Debuff+Burst</span></td>
+            </tr>
+            <tr>
+              <td class="p-3 font-bold text-blue-400">Defect</td>
+              <td class="p-3"><span class="bg-green-600/20 text-green-400 px-2 py-0.5 rounded font-bold">A</span><br><span class="text-xs text-slate-400">Passive+Tank</span></td>
+              <td class="p-3"><span class="bg-slate-600/40 text-slate-300 px-2 py-0.5 rounded">B</span><br><span class="text-xs text-slate-400">Orb+Discard</span></td>
+              <td class="p-3 text-red-400">✕</td>
+              <td class="p-3"><span class="bg-slate-600/40 text-slate-300 px-2 py-0.5 rounded">B</span><br><span class="text-xs text-slate-400">Orb+Board</span></td>
+              <td class="p-3"><span class="bg-slate-600/40 text-slate-300 px-2 py-0.5 rounded">B</span><br><span class="text-xs text-slate-400">Orb+Stars</span></td>
+            </tr>
+            <tr>
+              <td class="p-3 font-bold text-purple-400">Necrobinder</td>
+              <td class="p-3"><span class="bg-green-600/20 text-green-400 px-2 py-0.5 rounded font-bold">A</span><br><span class="text-xs text-slate-400">Board+Tank</span></td>
+              <td class="p-3"><span class="bg-amber-600/20 text-amber-400 px-2 py-0.5 rounded font-bold">S</span><br><span class="text-xs text-slate-400">Loop+Debuff</span></td>
+              <td class="p-3"><span class="bg-slate-600/40 text-slate-300 px-2 py-0.5 rounded">B</span><br><span class="text-xs text-slate-400">Board+Orb</span></td>
+              <td class="p-3 text-red-400">✕</td>
+              <td class="p-3"><span class="bg-amber-600/20 text-amber-400 px-2 py-0.5 rounded font-bold">S</span><br><span class="text-xs text-slate-400">Doom+Burst</span></td>
+            </tr>
+            <tr>
+              <td class="p-3 font-bold text-yellow-400">Regent</td>
+              <td class="p-3"><span class="bg-slate-600/40 text-slate-300 px-2 py-0.5 rounded">B</span><br><span class="text-xs text-slate-400">Burst+Tank</span></td>
+              <td class="p-3"><span class="bg-green-600/20 text-green-400 px-2 py-0.5 rounded font-bold">A</span><br><span class="text-xs text-slate-400">Burst+Debuff</span></td>
+              <td class="p-3"><span class="bg-slate-600/40 text-slate-300 px-2 py-0.5 rounded">B</span><br><span class="text-xs text-slate-400">Stars+Orb</span></td>
+              <td class="p-3"><span class="bg-amber-600/20 text-amber-400 px-2 py-0.5 rounded font-bold">S</span><br><span class="text-xs text-slate-400">Burst+Doom</span></td>
+              <td class="p-3 text-red-400">✕</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 3-Player -->
+    <section id="trios" class="scroll-mt-20 mt-10">
+      <h2 class="text-2xl font-bold text-amber-300 mb-4 not-prose">5. 3-Player Compositions</h2>
+
+      <div class="not-prose space-y-4">
+        <div class="bg-slate-800 rounded-lg p-5 border border-slate-700">
+          <div class="flex items-center gap-2 mb-3">
+            <span class="text-red-400 font-bold">Ironclad</span>
+            <span class="text-slate-500">+</span>
+            <span class="text-green-400 font-bold">Silent</span>
+            <span class="text-slate-500">+</span>
+            <span class="text-yellow-400 font-bold">Regent</span>
+            <span class="bg-green-900/30 text-green-400 text-xs px-2 py-0.5 rounded ml-2">Recommended</span>
+          </div>
+          <p class="text-sm text-slate-300">Tank + Debuff + Burst. Covers all three core roles perfectly. Regent builds Stars safely behind two defenders. Silent amplifies both Ironclad and Regent damage. The most well-rounded 3-player composition.</p>
+        </div>
+
+        <div class="bg-slate-800 rounded-lg p-5 border border-slate-700">
+          <div class="flex items-center gap-2 mb-3">
+            <span class="text-red-400 font-bold">Ironclad</span>
+            <span class="text-slate-500">+</span>
+            <span class="text-green-400 font-bold">Silent</span>
+            <span class="text-slate-500">+</span>
+            <span class="text-purple-400 font-bold">Necrobinder</span>
+          </div>
+          <p class="text-sm text-slate-300">Trades raw burst for board control and Doom. Necrobinder's Doom + Silent's Poison ticks push enemies past kill thresholds between turns. Ironclad anchors. Better against multi-enemy fights than the Regent variant.</p>
+        </div>
+
+        <div class="bg-slate-800 rounded-lg p-5 border border-slate-700">
+          <div class="flex items-center gap-2 mb-3">
+            <span class="text-red-400 font-bold">Ironclad</span>
+            <span class="text-slate-500">+</span>
+            <span class="text-green-400 font-bold">Silent</span>
+            <span class="text-slate-500">+</span>
+            <span class="text-blue-400 font-bold">Defect</span>
+          </div>
+          <p class="text-sm text-slate-300">Tank + Debuff + Scaling. Defect adds Frost defense and Lightning AOE while Plasma orbs fuel the team. Lower burst than Regent comps, but more consistent across all fight types.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4-Player -->
+    <section id="four-player" class="scroll-mt-20 mt-10">
+      <h2 class="text-2xl font-bold text-amber-300 mb-4 not-prose">6. 4-Player Full Squads</h2>
+
+      <div class="not-prose space-y-4">
+        <div class="bg-slate-800 rounded-lg p-5 border border-amber-600/40">
+          <div class="flex items-center gap-2 mb-3 flex-wrap">
+            <span class="text-red-400 font-bold">Ironclad</span><span class="text-slate-500">+</span>
+            <span class="text-green-400 font-bold">Silent</span><span class="text-slate-500">+</span>
+            <span class="text-blue-400 font-bold">Defect</span><span class="text-slate-500">+</span>
+            <span class="text-yellow-400 font-bold">Regent</span>
+            <span class="bg-amber-600/20 text-amber-400 text-xs px-2 py-0.5 rounded ml-2">Balanced — ~75% Win Rate</span>
+          </div>
+          <p class="text-sm text-slate-300 mb-2">Every role covered: Tank (Ironclad), Debuff (Silent), Utility (Defect), Burst (Regent). Four completely independent damage types — enemies can't counter everything. No relic competition between players. <strong class="text-white">This is the community-recommended all-rounder squad.</strong></p>
+          <ul class="text-xs text-slate-400 space-y-0.5 mt-2">
+            <li>Ironclad anchors and stacks Block</li>
+            <li>Silent debuffs and applies Poison</li>
+            <li>Defect scales with Orbs and shares Plasma energy</li>
+            <li>Regent detonates Stars for boss kills</li>
+          </ul>
+        </div>
+
+        <div class="bg-slate-800 rounded-lg p-5 border border-slate-700">
+          <div class="flex items-center gap-2 mb-3 flex-wrap">
+            <span class="text-red-400 font-bold">Ironclad</span><span class="text-slate-500">+</span>
+            <span class="text-green-400 font-bold">Silent</span><span class="text-slate-500">+</span>
+            <span class="text-purple-400 font-bold">Necrobinder</span><span class="text-slate-500">+</span>
+            <span class="text-yellow-400 font-bold">Regent</span>
+            <span class="bg-red-900/40 text-red-400 text-xs px-2 py-0.5 rounded ml-2">Aggressive Kill Squad</span>
+          </div>
+          <p class="text-sm text-slate-300">Leans harder into damage. Necrobinder's Doom + Regent's Star burst combine for massive single-turn boss kills. Sacrifices Defect's consistency and Plasma energy for raw kill power. Higher risk, higher reward.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quick Pick -->
+    <section id="quick-pick" class="scroll-mt-20 mt-10">
+      <h2 class="text-2xl font-bold text-amber-300 mb-4 not-prose">7. Pick Based on Playstyle</h2>
+
+      <div class="not-prose overflow-x-auto">
+        <table class="w-full text-left border-collapse bg-slate-800 rounded-lg overflow-hidden">
+          <thead class="bg-slate-700">
+            <tr>
+              <th class="p-3 font-semibold text-amber-400">Player Type</th>
+              <th class="p-3 font-semibold text-amber-400">Recommended Duo</th>
+              <th class="p-3 font-semibold text-amber-400">Why</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-700">
+            <tr>
+              <td class="p-3 font-medium text-white">New to co-op</td>
+              <td class="p-3"><span class="text-red-400">Ironclad</span> + <span class="text-green-400">Silent</span></td>
+              <td class="p-3">Forgiving, both provide block and debuffs independently. Classic Tank + Debuff covers all basics.</td>
+            </tr>
+            <tr>
+              <td class="p-3 font-medium text-white">Casual / Low coordination</td>
+              <td class="p-3"><span class="text-red-400">Ironclad</span> + <span class="text-blue-400">Defect</span></td>
+              <td class="p-3">Defect's orbs work passively. Minimal synergy communication required. Run your own builds and succeed.</td>
+            </tr>
+            <tr>
+              <td class="p-3 font-medium text-white">Hardcore / Optimizer</td>
+              <td class="p-3"><span class="text-purple-400">Necrobinder</span> + <span class="text-yellow-400">Regent</span></td>
+              <td class="p-3">Highest burst ceiling. Rewards precise timing and communication. Melts bosses when played perfectly.</td>
+            </tr>
+            <tr>
+              <td class="p-3 font-medium text-white">Completionist</td>
+              <td class="p-3">4-player full roster</td>
+              <td class="p-3">All co-op exclusive cards accessible. Every role covered. The full Slay the Spire 2 co-op experience.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="not-prose bg-slate-800 border border-slate-700 rounded-lg p-4 mt-6">
+        <p class="text-sm text-slate-400">
+          <strong class="text-amber-400">Note:</strong> These rankings reflect the Early Access meta (March 2026).
+          Mega Crit is actively balancing the game. Broad role splits (Tank/Debuff/DPS) age better than hyper-specific
+          card combos that may shift with patches. The <em>roles</em> stay the same even if individual card values change.
+        </p>
+      </div>
+    </section>
+  </article>
+
+  <!-- Navigation -->
+  <div class="not-prose mt-12 flex justify-between items-center">
+    <a href="/coop/" class="text-amber-400 hover:underline">&larr; Co-op Overview</a>
+    <a href="/coop/card-synergies/" class="inline-block bg-amber-600 hover:bg-amber-500 text-black font-bold px-6 py-3 rounded-lg transition-colors">
+      Card Synergies: Co-op Cards &amp; Combos &rarr;
+    </a>
+  </div>
+</BaseLayout>
